@@ -162,10 +162,7 @@ if minetest.get_modpath("digilines") then
 		if puncher:get_player_control().sneak then
 			local name = puncher:get_player_name()
 			player_last_clicked[name] = pos
-			local form = "formspec_version[4]"..
-					"size[8,4]"..
-					"button_exit[3,2.5;2,0.5;proceed;Proceed]"..
-					"field[1.75,1.5;4.5,0.5;channel;Channel;]"
+			local form = "field[channel;Channel;]"
 			minetest.show_formspec(name, "homedecor:lamp_set_channel", form)
 		end
 	end
@@ -1805,62 +1802,62 @@ minetest.register_alias("chains:chain_top_brass",              "homedecor:chain_
 minetest.register_alias("chains:chandelier",                   "homedecor:chandelier_steel")
 minetest.register_alias("chains:chandelier_steel",             "homedecor:chandelier_steel")
 minetest.register_alias("chains:chandelier_brass",             "homedecor:chandelier_brass")
-
 minetest.register_alias("homedecor:glowlight_half",            "homedecor:glowlight_half_14")
-minetest.register_alias("homedecor:glowlight_half_max",        "homedecor:glowlight_half_14")
+--minetest.register_alias("homedecor:glowlight_half_max",        "homedecor:glowlight_half_14")
 
 minetest.register_alias("homedecor:glowlight_quarter",         "homedecor:glowlight_quarter_14")
-minetest.register_alias("homedecor:glowlight_quarter_max",     "homedecor:glowlight_quarter_14")
+--minetest.register_alias("homedecor:glowlight_quarter_max",     "homedecor:glowlight_quarter_14")
 
 minetest.register_alias("homedecor:glowlight_small_cube",      "homedecor:glowlight_small_cube_14")
-minetest.register_alias("homedecor:glowlight_small_cube_max",  "homedecor:glowlight_small_cube_14")
+--minetest.register_alias("homedecor:glowlight_small_cube_max",  "homedecor:glowlight_small_cube_14")
 
 minetest.register_alias("homedecor:plasma_lamp",               "homedecor:plasma_lamp_14")
-minetest.register_alias("homedecor:plasma_lamp_max",           "homedecor:plasma_lamp_14")
+--minetest.register_alias("homedecor:plasma_lamp_max",           "homedecor:plasma_lamp_14")
 
 minetest.register_alias("homedecor:ground_lantern",            "homedecor:ground_lantern_14")
-minetest.register_alias("homedecor:ground_lantern_max",        "homedecor:ground_lantern_14")
+--minetest.register_alias("homedecor:ground_lantern_max",        "homedecor:ground_lantern_14")
 
 minetest.register_alias("homedecor:hanging_lantern",           "homedecor:hanging_lantern_14")
-minetest.register_alias("homedecor:hanging_lantern_max",       "homedecor:hanging_lantern_14")
+--minetest.register_alias("homedecor:hanging_lantern_max",       "homedecor:hanging_lantern_14")
 
 minetest.register_alias("homedecor:ceiling_lantern",           "homedecor:ceiling_lantern_14")
-minetest.register_alias("homedecor:ceiling_lantern_max",       "homedecor:ceiling_lantern_14")
+--minetest.register_alias("homedecor:ceiling_lantern_max",       "homedecor:ceiling_lantern_14")
 
 minetest.register_alias("homedecor:lattice_lantern_large",     "homedecor:lattice_lantern_large_14")
-minetest.register_alias("homedecor:lattice_lantern_large_max", "homedecor:lattice_lantern_large_14")
+--minetest.register_alias("homedecor:lattice_lantern_large_max", "homedecor:lattice_lantern_large_14")
 
 minetest.register_alias("homedecor:lattice_lantern_small",     "homedecor:lattice_lantern_small_14")
-minetest.register_alias("homedecor:lattice_lantern_small_max", "homedecor:lattice_lantern_small_14")
+--minetest.register_alias("homedecor:lattice_lantern_small_max", "homedecor:lattice_lantern_small_14")
 
 minetest.register_alias("homedecor:desk_lamp",                 "homedecor:desk_lamp_14")
-minetest.register_alias("homedecor:desk_lamp_max",             "homedecor:desk_lamp_14")
+--minetest.register_alias("homedecor:desk_lamp_max",             "homedecor:desk_lamp_14")
 
 minetest.register_alias("homedecor:ceiling_lamp",              "homedecor:ceiling_lamp_14")
-minetest.register_alias("homedecor:ceiling_lamp_max",          "homedecor:ceiling_lamp_14")
+--minetest.register_alias("homedecor:ceiling_lamp_max",          "homedecor:ceiling_lamp_14")
 
 minetest.register_alias("homedecor:table_lamp",                "homedecor:table_lamp_14")
-minetest.register_alias("homedecor:table_lamp_max",            "homedecor:table_lamp_14")
+--minetest.register_alias("homedecor:table_lamp_max",            "homedecor:table_lamp_14")
 
 minetest.register_alias("homedecor:standing_lamp",             "homedecor:standing_lamp_14")
-minetest.register_alias("homedecor:standing_lamp_max",         "homedecor:standing_lamp_14")
+--minetest.register_alias("homedecor:standing_lamp_max",         "homedecor:standing_lamp_14")
 
 minetest.register_alias("3dforniture:table_lamp",              "homedecor:table_lamp_14")
-minetest.register_alias("3dforniture:table_lamp_max",          "homedecor:table_lamp_14")
+--minetest.register_alias("3dforniture:table_lamp_max",          "homedecor:table_lamp_14")
 
 minetest.register_alias("3dforniture:torch_wall",              "homedecor:torch_wall")
-minetest.register_alias("torch_wall",                          "homedecor:torch_wall")
+--minetest.register_alias("torch_wall",                          "homedecor:torch_wall")
 
-minetest.register_alias("homedecor:plasma_ball",               "homedecor:plasma_ball_on")
-minetest.register_alias("homedecor:wall_lamp",                 "homedecor:wall_lamp_on")
+--minetest.register_alias("homedecor:plasma_ball",               "homedecor:plasma_ball_on")
+--minetest.register_alias("homedecor:wall_lamp",                 "homedecor:wall_lamp_on")
 
-minetest.register_alias("homedecor:rope_light_on_floor_0",     "homedecor:rope_light_on_floor_off")
-minetest.register_alias("homedecor:rope_light_on_floor_14",    "homedecor:rope_light_on_floor_on")
+--minetest.register_alias("homedecor:rope_light_on_floor_0",     "homedecor:rope_light_on_floor_off")
+--minetest.register_alias("homedecor:rope_light_on_floor_14",    "homedecor:rope_light_on_floor_on")
 
-minetest.register_alias("homedecor:rope_light_on_ceiling_0",   "homedecor:rope_light_on_ceiling_off")
-minetest.register_alias("homedecor:rope_light_on_ceiling_14",  "homedecor:rope_light_on_ceiling_on")
+--minetest.register_alias("homedecor:rope_light_on_ceiling_0",   "homedecor:rope_light_on_ceiling_off")
+--minetest.register_alias("homedecor:rope_light_on_ceiling_14",  "homedecor:rope_light_on_ceiling_on")
 
 for name, level in pairs(word_to_bright) do
+	if name ~=  nil then 
 	minetest.register_alias("homedecor:glowlight_half_"..name,        "homedecor:glowlight_half_"..level)
 	minetest.register_alias("homedecor:glowlight_quarter_"..name,     "homedecor:glowlight_quarter_"..level)
 	minetest.register_alias("homedecor:glowlight_small_cube_"..name,  "homedecor:glowlight_small_cube_"..level)
@@ -1878,6 +1875,7 @@ for name, level in pairs(word_to_bright) do
 	minetest.register_alias("homedecor:table_lamp_"..name,            "homedecor:table_lamp_"..level)
 	minetest.register_alias("homedecor:standing_lamp_"..name,         "homedecor:standing_lamp_"..level)
 	minetest.register_alias("3dforniture:table_lamp_"..name,          "homedecor:table_lamp_"..level)
+	end
 end
 
 if minetest.get_modpath("darkage") then
