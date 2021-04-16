@@ -260,7 +260,7 @@ for brightness_level = 0, 14 do
 		description = S("Thick Glowlight"),
 		tiles = tiles,
 		overlay_tiles = overlay,
-		use_texture_alpha = true,
+		use_texture_alpha = "clip",
 		drawtype = "nodebox",
 		paramtype = "light",
 		paramtype2 = "colorwallmounted",
@@ -326,7 +326,7 @@ for brightness_level = 0, 14 do
 		description = S("Thin Glowlight"),
 		tiles = tiles,
 		overlay_tiles = overlay,
-		use_texture_alpha = true,
+		use_texture_alpha = "clip",
 		drawtype = "nodebox",
 		paramtype = "light",
 		paramtype2 = "colorwallmounted",
@@ -393,7 +393,7 @@ for brightness_level = 0, 14 do
 		description = S("Small Glowlight Cube"),
 		tiles = tiles,
 		overlay_tiles = overlay,
-		use_texture_alpha = true,
+		use_texture_alpha = "clip",
 		paramtype = "light",
 		paramtype2 = "colorwallmounted",
 		drawtype = "nodebox",
@@ -445,7 +445,7 @@ for brightness_level = 0, 14 do
 			"default_gold_block.png",
 			lighttex
 		},
-		use_texture_alpha = true,
+		use_texture_alpha = "clip",
 		light_source = brightness_level,
 		sunlight_propagates = true,
 		groups = {cracky=3, oddly_breakable_by_hand=3, not_in_creative_inventory = nici},
@@ -470,7 +470,7 @@ for brightness_level = 0, 14 do
 		description = S("Ground Lantern/Light"),
 		mesh = "homedecor_ground_lantern.obj",
 		tiles = { gen_ls_tex_yellow, "homedecor_generic_metal_wrought_iron.png" },
-		use_texture_alpha = true,
+		use_texture_alpha = "clip",
 		inventory_image = "homedecor_ground_lantern_inv.png",
 		wield_image = "homedecor_ground_lantern_inv.png",
 		groups = {snappy=3, not_in_creative_inventory = nici},
@@ -497,7 +497,7 @@ for brightness_level = 0, 14 do
 		description = S("Hanging Lantern/Light"),
 		mesh = "homedecor_hanging_lantern.obj",
 		tiles = { "homedecor_generic_metal_wrought_iron.png", gen_ls_tex_yellow },
-		use_texture_alpha = true,
+		use_texture_alpha = "clip",
 		inventory_image = "homedecor_hanging_lantern_inv.png",
 		wield_image = "homedecor_hanging_lantern_inv.png",
 		groups = {snappy=3, not_in_creative_inventory = nici},
@@ -524,7 +524,7 @@ for brightness_level = 0, 14 do
 		drawtype = "mesh",
 		mesh = "homedecor_ceiling_lantern.obj",
 		tiles = { gen_ls_tex_yellow, "homedecor_generic_metal_wrought_iron.png" },
-		use_texture_alpha = true,
+		use_texture_alpha = "clip",
 		inventory_image = "homedecor_ceiling_lantern_inv.png",
 		description = S("Ceiling Lantern/Light"),
 		groups = {snappy=3, not_in_creative_inventory = nici},
@@ -789,7 +789,7 @@ for _, light_brightn_name in ipairs({"off", "on"}) do
 			fixed = { -0.1875, -0.5, -0.1875, 0.1875, 0, 0.1875 }
 		},
 		walkable = false,
-		use_texture_alpha = true,
+		use_texture_alpha = "clip",
 		light_source = onflag and (default.LIGHT_MAX - 5) or nil,
 		sunlight_propagates = true,
 		groups = {cracky=3, oddly_breakable_by_hand=3, not_in_creative_inventory = nici},
@@ -913,7 +913,7 @@ for _, light_brightn_name in ipairs({"off", "on"}) do
 			gen_ls_tex_yellow,
 			"homedecor_generic_metal_wrought_iron.png"
 		},
-		use_texture_alpha = true,
+		use_texture_alpha = "clip",
 		inventory_image = "homedecor_wall_lamp_inv.png",
 		groups = {snappy=3, not_in_creative_inventory = nici},
 		light_source = onflag and (default.LIGHT_MAX - 3) or nil,
@@ -1050,7 +1050,7 @@ homedecor.register("oil_lamp", {
 		{ name = "homedecor_generic_metal.png", color = 0xffa00000 },
 		"homedecor_oil_lamp_glass.png",
 	},
-	use_texture_alpha = true,
+	use_texture_alpha = "clip",
 	inventory_image = "homedecor_oil_lamp_inv.png",
 	selection_box = ol_cbox,
 	walkable = false,
@@ -1861,10 +1861,12 @@ for name, level in pairs(word_to_bright) do
 	minetest.register_alias("homedecor:glowlight_half_"..name,        "homedecor:glowlight_half_"..level)
 	minetest.register_alias("homedecor:glowlight_quarter_"..name,     "homedecor:glowlight_quarter_"..level)
 	minetest.register_alias("homedecor:glowlight_small_cube_"..name,  "homedecor:glowlight_small_cube_"..level)
+	if level > 0 and level < 14 then 
 	minetest.register_alias("homedecor:rope_light_on_floor_"..name,   "homedecor:rope_light_on_floor_"..level)
 	minetest.register_alias("homedecor:rope_light_on_ceiling_"..name, "homedecor:rope_light_on_ceiling_"..level)
-	minetest.register_alias("homedecor:plasma_lamp_"..name,           "homedecor:plasma_lamp_"..level)
 	minetest.register_alias("homedecor:plasma_ball_"..name,           "homedecor:plasma_ball_"..level)
+	end
+	minetest.register_alias("homedecor:plasma_lamp_"..name,           "homedecor:plasma_lamp_"..level)
 	minetest.register_alias("homedecor:ground_lantern_"..name,        "homedecor:ground_lantern_"..level)
 	minetest.register_alias("homedecor:hanging_lantern_"..name,       "homedecor:hanging_lantern_"..level)
 	minetest.register_alias("homedecor:ceiling_lantern_"..name,       "homedecor:ceiling_lantern_"..level)

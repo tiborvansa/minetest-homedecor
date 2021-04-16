@@ -178,7 +178,7 @@ for _, mat in ipairs(counter_materials) do
 			.."{homedecor_kitchen_cabinet_front.png"
 			.."{"..ic_cabinet_sides,
 		mesh = "homedecor_kitchen_cabinet.obj",
-		paramtype2 = "wallmounted",
+		paramtype2 = "colorwallmounted",
 		palette = "unifieddyes_palette_colorwallmounted.png",
 		airbrush_replacement_node = "homedecor:kitchen_cabinet_colored"..material,
 		place_param2 = 0,
@@ -238,7 +238,7 @@ for _, mat in ipairs(counter_materials) do
 			.."{homedecor_kitchen_cabinet_front_with_drawers.png"
 			.."{"..ic_cabinet_sides,
 		mesh = "homedecor_kitchen_cabinet.obj",
-		paramtype2 = "wallmounted",
+		paramtype2 = "colorwallmounted",
 		palette = "unifieddyes_palette_colorwallmounted.png",
 		airbrush_replacement_node = "homedecor:kitchen_cabinet_colored_with_drawers"..material,
 		groups = { snappy = 3, ud_param2_colorable = 1},
@@ -300,7 +300,7 @@ homedecor.register("kitchen_cabinet_colorable_half", {
 		'homedecor_kitchen_cabinet_front_half.png^homedecor_kitchen_cabinet_half_bevel.png'
 	},
 	mesh = "homedecor_kitchen_cabinet_half.obj",
-	paramtype2 = "wallmounted",
+	paramtype2 = "colorwallmounted",
 	palette = "unifieddyes_palette_colorwallmounted.png",
 	airbrush_replacement_node = "homedecor:kitchen_cabinet_colored_half",
 	place_param2 = 0,
@@ -363,7 +363,7 @@ homedecor.register("kitchen_cabinet_colorable_with_sink", {
 			.."{homedecor_kitchen_sink_top.png"
 			.."{homedecor_kitchen_cabinet_front.png"
 			.."{"..ic_cabinet_sides,
-	paramtype2 = "wallmounted",
+	paramtype2 = "colorwallmounted",
 	palette = "unifieddyes_palette_colorwallmounted.png",
 	airbrush_replacement_node = "homedecor:kitchen_cabinet_colored_with_sink",
 	place_param2 = 0,
